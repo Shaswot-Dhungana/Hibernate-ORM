@@ -1,0 +1,24 @@
+
+Commonly Used Annotations of Hibernate :~
+
+1. @Entity -> used to mark any class as Entity.
+
+2. @Table -> used to change the table details.
+
+3. @Id -> use to mark column as id(Primary Key)(Eg.Auto-Increment)
+
+4. @GeneratedValue -> used to perform auto-increment primary key in column of database.
+
+5. @Column -> Can be used to specify column mapping . for eg. to change the column name in the associated table in database.
+
+6. @Transient -> This tells hibernate that not to save this field.
+
+7. @Temporal -> @Temporal over a date field tells hibernate the format in which date needs to be saved.
+
+8. @Lob -> @Lob tells hibernate that this is a large object , not a simple object.
+
+
+
+<---     LOB => Large Object.         --->
+<---     BLOB => Binary Large Object. --->
+

@@ -4,11 +4,12 @@ package com.shaswotdhungana.myhibernate;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 
 //to use custom name for table in database use :~
-// @Entity Annotation is used to select whoch class will be linked with table in database.
+// @Entity Annotation is used to select which class will be linked with table in database.
 //@Entity(name="student_details")
 //OR
 //@Table(name="student_details")
@@ -24,18 +25,18 @@ public class student {
 
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int uid;
 	
 	private String name;
-	private String country;
+	private String gender;
 	
 	
-	public student(int uid, String name, String country) {
+	public student(int uid, String name, String gender) {
 		super();
 		this.uid = uid;
 		this.name = name;
-		this.country = country;
+		this.gender = gender;
 	}
 	
 	
@@ -59,13 +60,13 @@ public class student {
 	}
 
 
-	public String getCountry() {
-		return country;
+	public String getGender() {
+		return gender;
 	}
 
 
-	public void setCountry(String country) {
-		this.country = country;
+	public void setGender(String country) {
+		this.gender = country;
 	}
 
 
@@ -78,7 +79,7 @@ public class student {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return this.uid+","+this.name+","+this.country;
+		return this.uid+","+this.name+","+this.gender;
 	}
 
 	
