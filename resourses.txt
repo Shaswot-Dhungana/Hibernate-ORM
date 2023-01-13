@@ -1,0 +1,52 @@
+
+Difference between get() and load() :~ {
+
+Hibernate Session provide different methods to fetch data from database.
+ Two of them are - get() and load(). There are also a lot of overloaded 
+ methods for these, that we can use in different circumstances. At first 
+ look both get() and load() seems similar because both of them fetch the
+  data from database, however there are few differences between them, 
+
+  
+  
+    get() loads the data as soon as it’s called whereas load() returns a proxy object and loads data only when it’s actually required, so load() is better because it support lazy loading.
+    Since load() throws exception when data is not found, we should use it only when we know data exists.
+    We should use get() when we want to make sure data exists in the database.
+  
+  
+  get() method of hibernate session returns null if object is not found
+  in cache as well as in database.
+  get() involves database hit if object doesn't exists in session cache 
+  and returns a fully initialized object may involve several database call.
+  Use get method if you are not sure that object exists in Database or not.
+  
+  
+  load() methods throws ObjectNotFoundException if object is not found on
+  cache as well as in database but never returns null.
+  load() method can return proxy in place and only initialize the object 
+  or hit the database if any method other than getId() is called on 
+  persistent or Entity object. This lazy initialization increases the
+   performance.
+   Use load method if you are sure that object exists on database.
+   
+   
+   }
+   
+   
+   One 2 One Mapping {
+   
+   it is used to do One 2 one unidirectional mapping of database tables.
+   
+   
+   } 
+   
+   
+   Fetching Types {
+   
+   Lazy LOad : loads only those data which are requested... { Increase Performance }
+   
+   Eager Loading : loads all data available... { Decre4ase Performance }
+   
+   }
+   
+   

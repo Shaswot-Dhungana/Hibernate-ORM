@@ -31,6 +31,9 @@ public class student {
 	private String name;
 	private String gender;
 	
+	private Certificate certi;
+	
+	
 	
 	public student(int uid, String name, String gender) {
 		super();
@@ -67,6 +70,19 @@ public class student {
 
 	public void setGender(String country) {
 		this.gender = country;
+	}
+
+
+	
+	
+	
+	public Certificate getCerti() {
+		return certi;
+	}
+
+
+	public void setCerti(Certificate certi) {
+		this.certi = certi;
 	}
 
 

@@ -17,6 +17,22 @@ Commonly Used Annotations of Hibernate :~
 
 8. @Lob -> @Lob tells hibernate that this is a large object , not a simple object.
 
+9. @Embeddable -> it is ued to embeed different class to a single class and 
+				  store data in same  Table in database.
+
+10. @OneToOne -> it is used to do One 2 one unidirectional mapping of database tables.
+
+11. @OneToMany -> used to do one to many mapping of tables.
+
+12. @ManyToOne -> used to do many to one mapping of tables.
+
+13. @ManyToMany -> used to do many to many mapping of tables.
+
+14. @JoinColumn -> used to modify JoinColum name or inverseJoinColumns name. and so on. 
+
+15. @JoinTable(name = "MyTable") -> used to create joined table or Modify details of Joined tables in database;
+
+
 
 
 <---     LOB => Large Object.         --->
