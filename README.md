@@ -1,4 +1,4 @@
 # Hibernate-ORM
-## Hibernate ORM CLI  Maven Project.
+## Hibernate ORM Maven Project.
 
 # Hibernate Object Relational Mapping.
